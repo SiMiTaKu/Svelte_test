@@ -1,8 +1,10 @@
 <script>
 	export let name;
+	export let img_src;
 </script>
 
 <main>
+	<img src={img_src} alt="prof-icon.jpg">
 	<h1>Hello {name}!</h1>
 	<div class="test-message">これはテストサイトだぜ</div>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
@@ -11,7 +13,7 @@
 <style>
 	main {
 		text-align: center;
-		padding:    1em;
+		padding:    0;
 		max-width:  240px;
 		margin:     0 auto;
 	}
