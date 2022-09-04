@@ -7,8 +7,10 @@
 
 <main>
 	<section id="main-visual">
-		<img src={img_src} alt="prof-icon.jpg" class="icon">
-		<h1 class="title">Hello {name}!</h1>
+		<div class="container">
+			<img src={img_src} alt="prof-icon.jpg" class="container__icon">
+			<h1 class="container__title">Hello {name}!</h1>
+		</div>
 	</section>
 	<Nested/>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
@@ -23,21 +25,24 @@
 	}
 
 	#main-visual {
-		height:     200px;
-		padding:    60px;
-		text-align: left;
+		padding:          30px 0;
+		background-color: #ddfffe;
 	}
 
-	#main-visual .icon{
+	#main-visual .container{
+		width: 1024px;
+		margin: 0 auto;
+
+	}
+
+	#main-visual .container__icon{
 		display:       inline-block;
 		width:         200px;
 		margin-right:  50px;
 		border-radius: 100px;
 	}
 
-
-
-	#main-visual .title{
+	#main-visual .container__title{
 		display:        inline-block;
 		color:          #ff3e00;
 		font-size:      4em;
