@@ -25,7 +25,6 @@
 	}
 
 	#main-visual {
-		padding:          30px 0;
 		background-color: #ddfffe;
 	}
 
