@@ -1,4 +1,6 @@
 <script>
+    import Nested from "./Nested.svelte";
+
 	export let name;
 	export let img_src;
 </script>
@@ -8,9 +10,7 @@
 		<img src={img_src} alt="prof-icon.jpg" class="icon">
 		<h1 class="title">Hello {name}!</h1>
 	</section>
-	<div class="test-area">
-		<p class="test-area__message">これはテストサイトだぜ</p>
-	</div>
+	<Nested/>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
 
@@ -45,18 +45,6 @@
 		vertical-align: top;
 	}
 
-	.test-area {
-		width:            1024px;
-		margin:           0 auto;
-		background-color: gray;
-		border-radius:    8px;
-		height:           50px;
-	}
-	.test-area__message {
-	    font-size:   large;
-	    font-weight: bold;
-		color:       white;
-	}
 	@media (min-width: 640px) {
 		main {
 			max-width: none;
