@@ -1,5 +1,6 @@
 <script>
-    import Nested from "./Nested.svelte";
+    import Nested               from "./Nested.svelte";
+    import CountButtonComponent from "./CountButtonComponent.svelte";
 
 	export let name;
 	export let img_src;
@@ -13,6 +14,11 @@
 		</div>
 	</section>
 	<Nested/>
+	<section id="svelte-application">
+		<div class="container">
+			<CountButtonComponent/>
+		</div>
+	</section>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
 
@@ -28,7 +34,7 @@
 		background-color: #ddfffe;
 	}
 
-	#main-visual .container{
+	.container{
 		width: 1024px;
 		margin: 0 auto;
 
