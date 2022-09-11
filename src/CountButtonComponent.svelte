@@ -1,6 +1,14 @@
 <script>
     let count = 0;
 
+    $: if(count >= 10){
+        alert('count is dangerously high!');
+		count = 9;
+    } else if(count <= -10) {
+        alert('count is dangerously low!');
+        count = -9;
+    }
+
     function incrementCount(){
         count += 1;
     }
@@ -8,11 +16,23 @@
     function decrementCount(){
         count -= 1;
     }
+
+    function resetCount(){
+        count = 0;
+    }
+
+    $:douled = count * 2;
 </script>
 
-<p class="count-number">Now : {count}</p>
-<button class="count-button" on:click = {incrementCount}>Increment</button>
-<button class="count-button" on:click = {decrementCount}>Decrement</button>
+<div>
+    <p class="count-number">Now : {count}</p>
+    <button class="count-button" on:click = {incrementCount}>Increment</button>
+    <button class="count-button" on:click = {decrementCount}>Decrement</button>
+    <button class="count-button" on:click = {resetCount}>Reset</button>
+</div>
+<div>
+    <p>{count} douled is {douled}</p>
+</div>
 
 
 <style>
@@ -36,13 +56,19 @@
         padding:          5px;
         font-size:        30px;
         font-weight:      bold;
+        color:            white;
         border-radius:    8px;
-        background-color: #aaffff;
+        background-color: #1c8181;
         border:           none;
         vertical-align:   top;
+        transition:       1s;
     }
 
     .count-button:hover {
         opacity: 0.8;
+    }
+
+    .count-button:active {
+        transition: 0.1s;
     }
 </style>
