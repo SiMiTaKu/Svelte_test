@@ -1,6 +1,7 @@
 <script>
     import Nested               from "./Nested.svelte";
     import CountButtonComponent from "./CountButtonComponent.svelte";
+	import Math                 from "./Math.svelte";
 
 	export let name;
 	export let img_src;
@@ -17,6 +18,11 @@
 	<section id="svelte-application">
 		<div class="container">
 			<CountButtonComponent/>
+		</div>
+	</section>
+	<section id="math-section">
+		<div class="container">
+			<Math/>
 		</div>
 	</section>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
@@ -59,6 +65,11 @@
 		main {
 			max-width: none;
 		}
+	}
+
+	/* math ---------------------- */
+	#math-section {
+		background-color: #b9f2ff;
 	}
 
 </style>
