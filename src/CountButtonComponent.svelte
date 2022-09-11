@@ -36,13 +36,19 @@
         padding:          5px;
         font-size:        30px;
         font-weight:      bold;
+        color:            white;
         border-radius:    8px;
-        background-color: #aaffff;
+        background-color: #1c8181;
         border:           none;
         vertical-align:   top;
+        transition:       1s;
     }
 
     .count-button:hover {
         opacity: 0.8;
+    }
+
+    .count-button:active {
+        transition: 0.1s;
     }
 </style>
