@@ -1,9 +1,6 @@
 <script>
-    import App from "../App.svelte";
-    import CountButtonComponent from "../button/CountButtonComponent.svelte";
-    import Math from "../button/Math.svelte";
-import Answer from "./Answer.svelte";
-	import Pack from "./Pack.svelte";
+    import Answer from "./Answer.svelte";
+	import Pack   from "./Pack.svelte";
 
 	const pkg = {
 		name:    "svelte",
