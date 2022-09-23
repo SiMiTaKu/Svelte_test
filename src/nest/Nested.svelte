@@ -23,7 +23,6 @@
         <Answer/>
 	</div>
 	<div class="container">
-		<Pack name={"svelte"} version={"3"} speed={"bazzling"} website={"https://svelte.dev"}/>
 		<Pack {...pkg}/>
 	</div>
 </section>
