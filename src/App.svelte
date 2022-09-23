@@ -1,5 +1,5 @@
 <script>
-    import Nested               from "./Nested.svelte";
+    import Nested               from "./nest/Nested.svelte";
     import CountButtonComponent from "./CountButtonComponent.svelte";
 	import Math                 from "./Math.svelte";
 
