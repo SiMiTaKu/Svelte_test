@@ -1,5 +1,5 @@
 <script>
-    import Answer from "./Answer.svelte";
+    
 	import Pack   from "./Pack.svelte";
 
 	const pkg = {
@@ -18,10 +18,7 @@
         <p class="container__message">This is a paragraph.</p>
 		<p class="container__message">{@html string}</p>
     </div>
-	<div class="container">
-		<Answer answer={44}/>
-        <Answer/>
-	</div>
+	
 	<div class="container">
 		<Pack name={"svelte"} version={"3"} speed={"bazzling"} website={"https://svelte.dev"}/>
 		<Pack {...pkg}/>
