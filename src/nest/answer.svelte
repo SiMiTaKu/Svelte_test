@@ -1,5 +1,5 @@
 <script>
-    export let answer = "mystery"
+    export let answer = "mystery";
 </script>
 
 <div class="sentence">
