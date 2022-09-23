@@ -1,6 +1,16 @@
 <script>
-    import Answer from "./Answer.svelte";
+    import App from "../App.svelte";
+    import CountButtonComponent from "../button/CountButtonComponent.svelte";
+    import Math from "../button/Math.svelte";
+import Answer from "./Answer.svelte";
 	import Pack from "./Pack.svelte";
+
+	const pkg = {
+		name:    "svelte",
+		version: "3",
+		speed:   "bazzling",
+		website: "https://svelte.dev"
+	}
 
 	let string        = "I like <strong>cake</strong>."
 </script>
@@ -17,6 +27,7 @@
 	</div>
 	<div class="container">
 		<Pack name={"svelte"} version={"3"} speed={"bazzling"} website={"https://svelte.dev"}/>
+		<Pack {...pkg}/>
 	</div>
 </section>
 
