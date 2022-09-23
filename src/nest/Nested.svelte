@@ -1,6 +1,6 @@
 <script>
 	import Pack   from "./Pack.svelte";
-    import Answer from "./Answer.svelte";
+	import Answer2 from "./Answer2.svelte";
 
 	const pkg = {
 		name:    "svelte",
@@ -19,8 +19,8 @@
 		<p class="container__message">{@html string}</p>
     </div>
 	<div class="container">
-		<Answer answer={"44"}/>
-        <Answer/>
+		<Answer2 answer={"44"}/>
+		<Answer2/>
 	</div>
 	<div class="container">
 		<Pack name={"svelte"} version={"3"} speed={"bazzling"} website={"https://svelte.dev"}/>
