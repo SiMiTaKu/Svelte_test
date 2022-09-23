@@ -3,7 +3,7 @@
 </script>
 
 <div class="sentence">
-    The answer is <span class="sentence__answer">{ answer }</span>.
+    The answer is <span class="sentence__answer">{answer}</span>.
 </div>
 
 <style>
