@@ -10,6 +10,12 @@
 	}
 
 	let string        = "I like <strong>cake</strong>."
+
+	let cats = [
+		{ id: 'J---aiyznGQ', name: 'Keyboard Cat' },
+		{ id: 'z_AbfPXTKms', name: 'Maru' },
+		{ id: 'OUtn3pvWmpg', name: 'Henri The Existential Cat' }
+	];
 </script>
 
 <section id="text-area">
@@ -25,6 +31,15 @@
 	<div class="container">
 		<Pack name={"svelte"} version={"3"} speed={"bazzling"} website={"https://svelte.dev"}/>
 		<Pack {...pkg}/>
+	</div>
+	<div class="container">
+		<div class="cat-youtube-list">
+			{#each cats as {id, name}, i}
+			    <li class="cat-youtube-list__item">
+					<a target="_black" href="https://www.youtube.com/watch?v={id}">{ i + 1 }: {name}</a>
+				</li>
+			{/each}
+		</div>
 	</div>
 </section>
 
@@ -49,5 +64,14 @@
         font-size:   large;
         font-weight: bold;
 		color:       rgb(30, 30, 30);
+	}
+
+	.cat-youtube-list {
+		margin: 0 auto;
+		width:  300px;
+	}
+
+	.cat-youtube-list__item {
+		text-align: left;
 	}
 </style>
