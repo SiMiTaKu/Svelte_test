@@ -1,6 +1,7 @@
 <script>
-	import Pack   from "./Pack.svelte";
-	import Answer from "./Answer.svelte";
+	import Pack        from "./Pack.svelte";
+	import Answer      from "./Answer.svelte";
+	import EmojiThings from "./EmojiThings.svelte";
 
 	const pkg = {
 		name:    "svelte",
@@ -11,11 +12,17 @@
 
 	let string        = "I like <strong>cake</strong>."
 
-	let cats = [
-		{ id: 'J---aiyznGQ', name: 'Keyboard Cat' },
-		{ id: 'z_AbfPXTKms', name: 'Maru' },
-		{ id: 'OUtn3pvWmpg', name: 'Henri The Existential Cat' }
+	let fruitsList = [
+		{ id: 1, name: 'apple' },
+		{ id: 2, name: 'banana' },
+		{ id: 3, name: 'carrot' },
+		{ id: 4, name: 'doughnut' },
+		{ id: 5, name: 'egg' },
 	];
+
+	function handleClick() {
+		fruitsList = fruitsList.slice(1);
+	}
 </script>
 
 <section id="text-area">
@@ -33,13 +40,14 @@
 		<Pack {...pkg}/>
 	</div>
 	<div class="container">
-		<div class="cat-youtube-list">
-			{#each cats as {id, name}, i}
-			    <li class="cat-youtube-list__item">
-					<a target="_black" href="https://www.youtube.com/watch?v={id}">{ i + 1 }: {name}</a>
-				</li>
+		<ul class="fruits-list">
+			{#each fruitsList as fruit (fruit.id)}
+			    <li class="fruits-list__item"><EmojiThings name={fruit.name}/></li>
 			{/each}
-		</div>
+		</ul>
+		<button on:click={handleClick}>
+			Remove first things
+		</button>
 	</div>
 </section>
 
@@ -66,12 +74,12 @@
 		color:       rgb(30, 30, 30);
 	}
 
-	.cat-youtube-list {
+	.fruits-list {
 		margin: 0 auto;
-		width:  300px;
+		width:  250px;
 	}
 
-	.cat-youtube-list__item {
+	.fruits-list__item {
 		text-align: left;
 	}
 </style>
