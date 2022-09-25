@@ -1,7 +1,7 @@
 <script>
     import Nested               from "./nest/Nested.svelte";
     import CountButtonComponent from "./button/CountButtonComponent.svelte";
-	import Math                 from "./button/Math.svelte";
+	import Math                 from "./button/MathApp.svelte";
 	import LogIn                from "./button/LogIn.svelte";
 
 	export let name;

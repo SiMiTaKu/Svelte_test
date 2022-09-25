@@ -32,8 +32,16 @@
 </div>
 <div>
     <p>{count} douled is {douled}</p>
+    {#if Math.abs(douled) > 16}
+        <p>Absolute of {douled} is greater than 16</p>
+    {:else}
+        {#if 4 > Math.abs(douled)}
+            <p>Absolute of {Math.abs(douled)} is less than 4</p>
+        {:else}
+            <p>Absolute of {Math.abs(douled)} is between 4 and 16</p>
+        {/if}
+    {/if}
 </div>
-
 
 <style>
     .count-number{
